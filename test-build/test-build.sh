@@ -6,8 +6,9 @@ pwd
 cd ${WORKSPACE}/test-build
 sed -i 's/\$\$BUILD_NUMBER\$\$/'${BUILD_NUMBER}'/g' docker-compose.yml
 echo $BUILD_NUMBER
-echo $PORT_NUMBER
+
 sed -i 's/\$\$PORT_NUMBER\$\$/'`expr 5000 + ${BUILD_NUMBER}`'/g' docker-compose.yml
 pwd
 chmod 777 ./rancher-compose
+echo $BUILD_NUMBER
 ./rancher-compose -p python-redis-demo-build up -d
