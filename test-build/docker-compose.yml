@@ -6,13 +6,13 @@ redis:
 pyapp:
   restart: always
   tty: true
-  image: 192.168.180.100:80/python-redis-demo:$$BUILD_ID$$
+  image: 192.168.180.100:80/python-redis-demo:$$BUILD_NUMBER$$
   links:
   - 'redis:'
   stdin_open: true
 pyapplb:
   ports:
-  - :5000
+  -$$PORT_NUMBER$$:5000
   restart: always
   tty: true
   image: rancher/load-balancer-service
