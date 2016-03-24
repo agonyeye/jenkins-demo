@@ -6,4 +6,4 @@ pyapplb:
   scale: 1
   load_balancer_config:
 
-    name: pyapplb
+    name: pyapplb config
