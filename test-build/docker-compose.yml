@@ -12,7 +12,7 @@ pyapp:
   stdin_open: true
 pyapplb:
   ports:
-  - :5000
+  - 5000:5000
   restart: always
   tty: true
   image: rancher/load-balancer-service
