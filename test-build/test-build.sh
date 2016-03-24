@@ -5,6 +5,7 @@ docker push 192.168.180.100:80/python-redis-demo:${BUILD_NUMBER}
 pwd
 cd ${WORKSPACE}/test-build
 sed -i 's/\$\$BUILD_NUMBER\$\$/'${BUILD_NUMBER}'/g' docker-compose.yml
+echo $BUILD_NUMBER
 echo $PORT_NUMBER
 sed -i 's/\$\$PORT_NUMBER\$\$/'`expr 5000 + ${BUILD_NUMBER}`'/g' docker-compose.yml
 pwd
