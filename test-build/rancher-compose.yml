@@ -5,4 +5,4 @@ pyapp:
 pyapplb:
   scale: 1
   load_balancer_config:
-    name: pyapplb config
+    name: pyapplb
